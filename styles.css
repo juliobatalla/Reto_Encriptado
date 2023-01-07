@@ -1,0 +1,169 @@
+/* LIGA DE FONTS GOOGLE
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto+Mono&display=swap');
+*
+/* COLOR FONDO */
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Encabezado */    
+
+.encabezado{
+    width: 100%;
+    height: 120px;
+    text-align: left;
+    background: #052051;
+}
+
+.logo-3{
+    display: block;
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin: 20px 0px 0px 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px #e9ecf8, -3px -3px #e9ecf8;
+}
+
+.challenge{
+    position:fixed;
+    justify-content: center;
+    align-items:baseline;
+    color: #e9ecf8;
+    padding: 40px 0 0 125px;
+}
+
+.items1{
+    font-size: 100%;
+    font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.items2{
+    font-size: 80%;
+    font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
+}
+
+/* BODY */ 
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+    margin: 2%;
+    width: 360px;
+    height: 50%;
+}
+
+/* POSICIONAMIENTO */
+
+#botonCopiar{
+    display: none;
+}
+
+.boton{
+    background: #052051;
+    font-size: 15px;
+    color: #F3F5FC;
+    width: 100px;
+    height: 35px;
+    margin: 5.5px;
+    border-radius: 5px;
+    box-shadow: 3px 3px darkgray, -3px -3px darkgrey;
+    transition: 2s all;
+    cursor: pointer;
+}
+
+.boton:hover{
+    background: #356EA9;
+    transform: scale(1.2);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    flex-direction:column;
+    gap: 30px;
+    background: #F3F5FC;
+}
+
+.inputBox{  
+    position: relative;
+    width: 360px;
+}
+
+.inputBox input,
+.inputBox textarea
+{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid darkgray;
+    background: #F3F5FC;
+    border-radius: 5px;
+    outline: none;
+    color: #052051;
+    font-size: 1em;
+    text-transform:lowercase;
+    transition: 0.5s;
+}
+
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 15px;
+    pointer-events: none;
+    font-size: .8em;
+    color: darkgray;
+    text-transform: lowercase;
+    transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span,
+.inputBox textarea:valid ~ span,
+.inputBox textarea:focus ~ span
+{
+    color: #070b61;
+    transform: translateX(15px) translateY(-5px);
+    font-size: 0.60em;
+    padding: 0 5px;
+    background: #F3F5FC;
+    border-left: 2px solid #070b61;
+    border-right: 2px solid #070b61;
+    letter-spacing: 0.2em;
+}
+
+/* FOOTER */
+
+footer{
+    position: relative;
+    margin-bottom: 1em;
+    width: 100%;
+    height: 100px;
+    text-align: left;
+    background: #052051;
+}
+
+.logoJB-01{
+    width: 85px;
+    float: left;
+    padding: 12px 0 0 20px;
+}
+
+.copyright{
+    color: #e9ecf8;
+    font-size: 12px;
+    padding: 25px 0 0 100px;
+}
+
+ul {
+    list-style-type: none;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Cifrado Texto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="styles.css">
+        <script type="text/javascript"></script>
+    </head>
+    <div class="encabezado">
+        <img src="imagen/Logo-3.png" alt="Logo de Alura" class="logo-3">
+        <ul class="challenge">
+            <li class="items1">Challenge ONE Sprint 01:</li>
+            <li class="items2">Encriptador de texto con Javascript</li>
+         </ul>
+    </div>
+    <body>
+            <div class="inputBox">
+                <input required="required" type="text" autocomplete="off" id="textoEncriptado"/>
+                <span>Ingrese Texto a Encriptar / Desencriptar</span>
+            </div>
+            <section>
+                <div class="buttontBox">
+                        <button class="boton" type="button" id="botonEncriptado">Encriptar</button>
+                        <button class="boton" type="button" id="botonDesencriptado">Desencriptar</button>
+                        <button class="boton" type="button" id="botonCopiar">Copiar</button>
+                </div>
+            </section>
+            <div class="inputBox">
+                <textarea required="required" id="textoDesencriptado" rows="10" cols="50"></textarea>
+                <span>Texto Encriptado / Desencriptado</span>
+            </div>
+            
+        <script>
+            var btn = document.querySelector("#botonEncriptado");
+            btn.onclick = encriptar;
+            var btn2 = document.querySelector("#botonDesencriptado");
+            btn2.onclick = desencriptar;
+            var btn3 = document.querySelector("#botonCopiar");
+            btn3.onclick = copiar;
+
+                /*
+
+                i = Es para letras mayusculas y minusculas
+                m = multiples lineas
+                g = toda la linea u oracion
+            */
+
+            function encriptar(){
+                var frase = document.getElementById("textoEncriptado").value.toLowerCase();
+            var textoEncriptado = frase.replace(/e/img, "enter");
+            var textoEncriptado = textoEncriptado.replace(/i/img, "imes");
+            var textoEncriptado = textoEncriptado.replace(/a/img, "ai");
+            var textoEncriptado = textoEncriptado.replace(/o/img, "ober");
+            var textoEncriptado = textoEncriptado.replace(/u/img, "ufat");
+
+            document.getElementById("textoDesencriptado").innerHTML = textoEncriptado;
+            document.getElementById("botonCopiar").style.display = "show";
+            document.getElementById("botonCopiar").style.display = "inherit";
+            }
+
+            function desencriptar(){
+                var frase = document.getElementById("textoEncriptado").value.toLowerCase();
+            var textoEncriptado = frase.replace(/enter/img, "e");
+            var textoEncriptado = textoEncriptado.replace(/imes/img, "i");
+            var textoEncriptado = textoEncriptado.replace(/ai/img, "a");
+            var textoEncriptado = textoEncriptado.replace(/ober/img, "o");
+            var textoEncriptado = textoEncriptado.replace(/ufat/img, "u");
+
+            document.getElementById("textoDesencriptado").innerHTML = textoEncriptado;
+            }
+
+            function copiar(){
+                var contenido = document.querySelector("#textoDesencriptado");
+                contenido.select();
+                document.execCommand("copy");
+            }
+
+        </script>
+    </body>
+
+    <footer>
+        <img src="imagen/logoJB-01.png"  alt="Logo Escudo" class="logoJB-01">
+        <ul class="copyright">
+            <li class="items">&copy</li>
+            <li class="items">JULIO ERNESTO BATALLA SOTO  -  2022</li>
+            <li class="items">COPYRIGHT</li>
+         </ul>
+    </footer>
+</html>
