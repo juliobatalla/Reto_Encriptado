@@ -63,6 +63,11 @@ section{
 
 /* POSICIONAMIENTO */
 
+label{
+    font-size: 20px;
+    margin: 0;
+}
+
 #botonCopiar{
     display: none;
 }
@@ -89,7 +94,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 50vh;
+    min-height: 40vh;
     flex-direction:column;
     gap: 30px;
     background: #F3F5FC;
@@ -118,11 +123,10 @@ body{
 .inputBox span{
     position: absolute;
     left: 0;
-    padding: 15px;
+    padding: 10px;
     pointer-events: none;
-    font-size: .8em;
+    font-size: 1em;
     color: darkgray;
-    text-transform: lowercase;
     transition: 0.5s;
 }
 
@@ -132,8 +136,8 @@ body{
 .inputBox textarea:focus ~ span
 {
     color: #070b61;
-    transform: translateX(15px) translateY(-5px);
-    font-size: 0.60em;
+    transform: translateX(13px) translateY(-5px);
+    font-size: 0.7em;
     padding: 0 5px;
     background: #F3F5FC;
     border-left: 2px solid #070b61;
