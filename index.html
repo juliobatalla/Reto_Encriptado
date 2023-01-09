@@ -15,6 +15,7 @@
          </ul>
     </div>
     <body>
+        <form>
             <div class="inputBox">
                 <input required="required" type="text" autocomplete="off" id="textoEncriptado"/>
                 <span>Ingrese Texto a Encriptar / Desencriptar</span>
@@ -31,7 +32,8 @@
                 <textarea required="required" id="textoDesencriptado" rows="10" cols="50"></textarea>
                 <span>Texto Encriptado / Desencriptado</span>
             </div>
-            
+            <input type="reset" value="Limpiar Datos" class="limpiarDatos">
+        </form>
         <script>
             var btn = document.querySelector("#botonEncriptado");
             btn.onclick = encriptar;
